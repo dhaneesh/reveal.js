@@ -63,19 +63,19 @@
 							<p class="fragment">
 								Inserting HTML<br />
 								<pre class="fragment"><code class="php" data-trim>
-										ajax_command_html('#my-div', '<p>...</p>'');
+ajax_command_html('#my-div', '&lt;p>...&lt;/p>'');
 									</code></pre>
 							</p>
 							<p class="fragment">
 								Adding CSS<br />
 								<pre class="fragment"><code class="php" data-trim>
-										ajax_command_add_css('#my-div', 'background:#000;');
+ajax_command_add_css('#my-div', 'background:#000;');
 									</code></pre>
 							</p>
 							<p class="fragment">
 								Invoking JS<br />
 								<pre class="fragment"><code class="php" data-trim>
-										ajax_command_invoke(NULL, 'myJSFunction');
+ajax_command_invoke(NULL, 'myJSFunction');
 									</code></pre>
 							</p>
 							<p class="fragment">
@@ -95,8 +95,7 @@
 					</section>
 					<section>
 						<p>Use a render array<br />
-						<pre style="font-size:40%;"><code class="php" data-trim>
-/**
+						<pre style="font-size:40%;"><code class="php" data-trim>/**
  * Custom AJAX callback.
  */
 function my_module_ajax_callback($id) {
@@ -109,7 +108,7 @@ function my_module_ajax_callback($id) {
       // Insert news article.
       ajax_command_insert('#news', drupal_render($article)),
       // Add news article to news list.
-      ajax_command_append('#news-list', '<li>' . $article->title . '</li>'),
+      ajax_command_append('#news-list', '&lt;li>' . $article->title . '&lt;/li>'),
       // Restripe news lists.
       ajax_command_restripe('#news-list'),
       // Invoke JS function to highlight new article.
@@ -122,8 +121,7 @@ function my_module_ajax_callback($id) {
 					</section>
 					<section>
 						<p>Use ajax_render().<br />
-						<pre style="font-size:40%;"><code class="php" data-trim>
-/**
+						<pre style="font-size:40%;"><code class="php" data-trim>/**
  * Custom AJAX callback.
  */
 function my_module_ajax_callback($id) {
@@ -134,7 +132,7 @@ function my_module_ajax_callback($id) {
   // Insert news article.
   $commands[] = ajax_command_insert('#news', drupal_render($article));
   // Add news article to news list.
-  $commands[] = ajax_command_append('#news-list', '<li>' . $article->title . '</li>');
+  $commands[] = ajax_command_append('#news-list', '&lt;li>' . $article->title . '&lt;/li>');
   // Restripe news lists.
   $commands[] = ajax_command_restripe('#news-list');
   // Invoke JS function to highlight new article.
@@ -159,8 +157,7 @@ function my_module_ajax_callback($id) {
 						</ul>
 					</section>
 					<section>
-						<pre style="font-size:40%;"><code class="php" data-trim>
-/**
+						<pre style="font-size:40%;"><code class="php" data-trim>/**
  * Custom AJAX callback. (D8)
  */
 function my_module_ajax_callback($id) {
@@ -171,7 +168,7 @@ function my_module_ajax_callback($id) {
   // Insert news article.
   $response->addCommand( new InsertCommand('#news', drupal_render($article)));
   // Add news article to news list.
-  $response->addCommand( new AppendCommand('#news-list', '<li>' . $article->title . '</li>'));
+  $response->addCommand( new AppendCommand('#news-list', '&lt;li>' . $article->title . '&lt;/li>'));
   // Restripe news lists.
   $response->addCommand( new RestripeCommand('#news-list'));
   // Invoke JS function to highlight new article.
@@ -219,8 +216,7 @@ function my_module_ajax_callback($id) {
 					</section>
 					<section>
 						<p>Add AJAX to Quiz form submit buttons.<br />
-						<pre style="font-size:40%;"><code class="php" data-trim>
-/**
+						<pre style="font-size:40%;"><code class="php" data-trim>/**
  * Implements hook_form_alter().
  */
 function ajax_quiz_form_alter(&$form, &$form_state, $form_id) {
@@ -231,8 +227,8 @@ function ajax_quiz_form_alter(&$form, &$form_state, $form_id) {
 
   if (in_array($form_id, $quiz_forms) && user_access('access ajax quiz')) {
     // Wrap form.
-    $form['#prefix'] = '<div id="ajax-quiz-wrapper">';
-    $form['#suffix'] = '</div>';
+    $form['#prefix'] = '&lt;div id="ajax-quiz-wrapper">';
+    $form['#suffix'] = '&lt;/div>';
 
     // Add ajax to each submit button.
     $nav_children = element_children($form['navigation']);
@@ -248,8 +244,7 @@ function ajax_quiz_form_alter(&$form, &$form_state, $form_id) {
 					</section>
 					<section>
 						<p>AJAX callback to render form and progress bar.<br />
-						<pre style="font-size:40%;"><code class="php" data-trim>
-/**
+						<pre style="font-size:40%;"><code class="php" data-trim>/**
  * AJAX callback for quiz submission.
  */
 function ajax_quiz_navigate_quiz($form, &$form_state) {
