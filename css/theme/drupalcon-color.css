@@ -32,8 +32,8 @@ section.has-light-background, section.has-light-background h1, section.has-light
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: rgba(28, 139, 201, 0.68);
-  background-color: rgba(28, 139, 201, 0.68); }
+  background: #121e47;
+  background-color: #121e47; }
 
 .reveal {
   font-family: 'Raleway', 'Verdana', 'Lucida Grande', 'Gill Sans', 'Arial', 'Helvetica', sans-serif;
