@@ -84,7 +84,8 @@
               <p class="fragment">
                 <strong>Work: </strong>
                 <a href="http://wearegenuine.com" target="_blank">Genuine</a>
-                  <span style="font-size:70%"> @WeAreGenuine(.com)</span>
+                  <span style="font-size:70%"> @WeAreGenuine(.com)</span><br />
+                  <span class="filename">(I have stickers!)</span>
               </p>
               <p class="fragment">
                 <strong>Exp:</strong> Working with Drupal since 2008.<br />
@@ -629,7 +630,7 @@ function mymodule_messages_page() {
   // Attach JavaScript library.
   $page['#attached']['library'][] = 'core/drupal.ajax';
 
-  return \Drupal::service('renderer')->render($page);
+  return $page;
 }
             </code><span class="codename">mymodule/mymodule.module </span></pre>
             <p class="caption">Function for building messages page is now using a render array. to the '#attached', 'library' array of that render array, declaring the drupal.ajax library to be included.
@@ -770,7 +771,7 @@ function mymodule_messages_page() {
   // Attach JavaScript library.
   $page['#attached']['library'][] = 'mymodule/mymodule.commands';
 
-  return \Drupal::service('renderer')->render($page);
+  return $page;
 }
             </code><span class="codename">mymodule/mymodule.module </span></pre>
             <p class="caption">Function for building messages page is now using a render array. to the '#attached', 'library' array of that render array, including the custom library. No longer including the AJAX library, as Drupal will know to include it from the libraries.yml file.
