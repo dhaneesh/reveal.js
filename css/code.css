@@ -19,6 +19,7 @@ pre span.codename {
   color: #FFF  !important;
   padding: 0 !important;
   margin: 0 !important;
+  padding-right: 10px !important;
   font-size:75% !important;
   font-style: italic !important;
   font-family: monospace !important;
