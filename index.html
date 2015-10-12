@@ -103,9 +103,9 @@
           <section>
             <h1>Goals of this Session</h1>
             <ul>
-              <li class="fragment">Understand the four steps of R.E.A.D</li>
-              <li class="fragment">When to decide between contrib, patch or custom</li>
+              <li class="fragment">Teach the four steps of R.E.A.D</li>
               <li class="fragment">Demonstrate the effectivness of R.E.A.D</li>
+              <li class="fragment">Outline great module habits</li>
             <ul>
           </section>
           <section data-transition="convex">
@@ -119,7 +119,7 @@
           </section>
           <section data-transition="convex">
             <h1>Drupal 8 is Coming</h1>
-            <img class="screenshot" style="max-width:500px" alt="Drupal 8 and the osbourne-effect" data-src="images/osbourne-effect-d8.png" />
+            <img class="screenshot" style="max-width:350px" alt="Drupal 8 and the osbourne-effect" data-src="images/osbourne-effect-d8.png" />
             <p class="caption">Building sites in Drupal 8 happening sooner then Drupal 8 modules are being updated</p>
           </section>
         </section>
@@ -133,13 +133,34 @@
               <li class="fragment"><strong style="color:yellow">D</strong>etermine work needed</li>
             </ul>
           </section>
-          <section data-transition="convex">
-            <h2>Flowchart FTW</h2>
-            <img data-src="images/read-flowchart.png" class="screenshot" />
-            <p class="caption">The steps of R.E.A.D can be thought as a flow of yes/no questions.</p>
+          <section data-transiiton="convex" data-background="images/stage.jpg">
+            <p class="tldr" style="border:0 !important;">Badcamp presents</p>
+            <h2>A Real World Scenario</h2>
+            <p class="filename">Produced by Mike Miles</a>
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
-            <h2>Real World Example</h2>
+            <h3>Act 0: <span style="font-style:oblique">The Requirements</span></h3>
+            <pre><code class="gherkin" data-trim>
+Feature: Moderation Schedule
+  In order to automate workbench workflow
+  As a content editor
+  I want to be able to schedule moderation state transitions
+
+  Scenario: Select States
+    When I create a moderation transition schedule
+    Then I can select the starting moderation state
+    And I can select the ending moderation state
+
+  Scenario: Select Dates
+    When I schedule moderated content to transition
+    Then I can select the date to set the starting moderation state
+    And I can select the date to set the ending moderation state
+
+  Scenario: Schedule Export
+    When I have created a moderation transition schedule
+    Then I can export the schedule using Features
+    And I can import the schedule into a new site.
+            </code></pre>
           </section>
         </section>
         <section data-background="images/r_background.png">
@@ -157,7 +178,7 @@
             <h2>Utilize the Community</h2>
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
-            <h2>Real World Example</h2>
+            <h3>Act 1: <span style="font-style:oblique">Research What Exists</span></h3>
           </section>
         </section>
         <section data-background="images/e_background.png">
@@ -175,7 +196,7 @@
             <h2>Maintainer Activity</h2>
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
-            <h2>Real World Example</h2>
+            <h3>Act 2: <span style="font-style:oblique">Evaluate the Options</span></h3>
           </section>
         </section>
         <section data-background="images/a_background.png">
@@ -193,7 +214,7 @@
             <h2>Check for Community Solutions</h2>
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
-            <h2>Real World Example</h2>
+            <h3>Act 3: <span style="font-style:oblique">Analyze the Gaps</span></h3>
           </section>
         </section>
         <section data-background="images/d_background.png">
@@ -211,7 +232,17 @@
             <h2>Estimate Effort</h2>
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
-            <h2>Real World Example</h2>
+            <h3>Act 4: <span style="font-style:oblique">Determine Work Needed</span></h3>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Review</h2>
+            <img data-src="images/read-flowchart.png" class="screenshot" />
+            <p class="caption">The steps of R.E.A.D can be thought as a flow of yes/no questions.</p>
+          </section>
+          <section data-transiiton="convex" data-background="images/stage.jpg">
+            <h3>Act 5: <span style="font-style:oblique">The Choice</span></h3>
           </section>
         </section>
         <section>
