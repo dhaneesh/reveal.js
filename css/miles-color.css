@@ -45,7 +45,15 @@ body {
 .reveal section img {
   background: rgba(255, 255, 255, 0.12);
   border-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.reveal section img.no-border {
+  border: 0;
+  background: 0;
+}
+
+.reveal section img .shadow {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
 
 .reveal a img {
@@ -99,4 +107,5 @@ body {
 .reveal .progress {
   background: rgba(0, 0, 0, 0.2);
 }
+
 
