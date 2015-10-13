@@ -12,6 +12,19 @@
   text-align: left;
 }
 
+.reveal pre.code {
+  background: #3F3F3F;
+  color: #DCDCDC;
+  display: block;
+  font-size:0.55em;
+  padding: 5px;
+  overflow: auto;
+  max-height: 500px;
+  word-wrap: normal;
+  font-family: monospace !important;
+  text-align: left;
+}
+
 pre span.codename {
   display:block;
   text-align: right;

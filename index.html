@@ -169,16 +169,50 @@ Feature: Moderation Schedule
             <p class="tldr">How and where to find modules to meet your needs.</p>
           </section>
           <section data-transition="convex">
-            <h2>Isolate Keywords</h2>
+            <h2>Isolate Functionality Keywords</h2>
+            <ul>
+              <li class="fragment">Gather all documentation, specs, notes, etc...</li>
+              <li class="fragment">Ask questions about any assumptions</li>
+              <li class="fragment">Mark, highlight, circle unique nouns and verbs</li>
+            </ul>
           </section>
           <section data-transition="convex">
             <h2>Perform Searches</h2>
+            <ul>
+              <li class="fragment">Favorite Search Engine, "Drupal [keywords]"</li>
+              <li class="fragment">Drupal.org, "[keywords]"</li>
+              <li class="fragment">??</li>
+            </ul>
           </section>
           <section data-transition="convex">
             <h2>Utilize the Community</h2>
+            <ul>
+              <li class="fragment">Ask for help on IRC: #drupal, #drupal-support</li>
+              <li class="fragment">Find Drupal group on favorite social network(s)</li>
+              <li class="fragment">Talk offline at meetups, camps and cons.</li>
+            </ul>
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
             <h3>Act 1: <span style="font-style:oblique">Research What Exists</span></h3>
+            <pre class="code"><span style="font-size:90%;">Feature: Moderation Schedule
+  In order to automate <strong style="color:yellow">workbench</strong> workflow
+  As a content editor
+  I want to be able to <strong style="color:yellow">schedule</strong> moderation state <strong style="color:yellow">transitions</strong>
+
+  Scenario: Select States
+    When I create a moderation transition schedule
+    Then I can <strong style="color:yellow">select</strong> the <strong style="color:yellow">starting moderation state</strong>
+    And I can <strong style="color:yellow">select</strong> the <strong style="color:yellow">ending moderation state</strong>
+
+  Scenario: Select Dates
+    When I schedule moderated content to transition
+    Then I can <strong style="color:yellow">select</strong> the <strong style="color:yellow">date</strong> to set the <strong style="color:yellow">starting</strong> moderation state
+    And I can <strong style="color:yellow">select</strong> the <strong style="color:yellow">date</strong> to set the <strong style="color:yellow">ending</strong> moderation state
+
+  Scenario: Schedule Export
+    When I have created a moderation transition schedule
+    Then I can <strong style="color:yellow">export</strong> the schedule using <strong style="color:yellow">Features</strong>
+    And I can import the schedule into a new site.</SPAN></pre>
           </section>
         </section>
         <section data-background="images/e_background.png">
@@ -187,7 +221,12 @@ Feature: Moderation Schedule
             <p class="tldr">Using metrics to determine the best fit.</p>
           </section>
           <section data-transition="convex">
-            <h2>Module Description</h2>
+            <h2>Gain General Understanding</h2>
+            <ul>
+              <li class="fragment">Read the description and linked documentation</li>
+              <li class="fragment">Answer "What does it do and not do?"</li>
+              <li class="fragment">Answer "What does it depend on?"</li>
+            </ul>
           </section>
           <section data-transition="convex">
             <h2>Community Adoption</h2>
