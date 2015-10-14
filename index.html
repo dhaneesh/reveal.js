@@ -126,7 +126,7 @@
         <section>
           <section>
             <h1>R.E.A.D</h1>
-            <ul>
+            <ul style="list-style-type:none">
               <li class="fragment"><strong style="color:yellow">R</strong>esearch what exists</li>
               <li class="fragment"><strong style="color:yellow">E</strong>valuate the options</li>
               <li class="fragment"><strong style="color:yellow">A</strong>nalyze the gaps</li>
@@ -137,6 +137,11 @@
             <p class="tldr" style="border:0 !important;">Badcamp presents</p>
             <h2>A Real World Scenario</h2>
             <p class="filename">Produced by Mike Miles</a>
+          </section>
+          <section data-transiiton="convex" data-background="images/stage.jpg">
+            <p class="tldr" style="border:0 !important;">Starring</p>
+            <h3>A. Drupalist</h3>
+            <img data-src="images/dev-developer.png" class="no-border section-gif" style="max-width:350px" />
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
             <h3>Act 0: <span style="font-style:oblique">The Requirements</span></h3>
@@ -194,7 +199,7 @@ Feature: Moderation Schedule
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
             <h3>Act 1: <span style="font-style:oblique">Research What Exists</span></h3>
-            <img data-src="images/dev-research.png" class="no-border section-gif" />
+            <img data-src="images/dev-research.png" class="no-border section-gif" style="max-width:350px" />
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
             <h3>Act 1, Scene 1: <span style="font-style:oblique">Isolate Keywords</span></h3>
@@ -260,10 +265,19 @@ Feature: Moderation Schedule
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
             <h3>Act 2: <span style="font-style:oblique">Evaluate the Options</span></h3>
+            <img data-src="images/dev-evaluate.png" class="no-border section-gif" style="max-width:350px" />
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
             <h3>Act 2, Scene 1: <span style="font-style:oblique">Gain General Understanding</span></h3>
-            <img data-src="images/wb-module-description.png" class="section-gif" />
+            <img data-src="images/wb-module-description.png" style="max-width:70%" />
+          </section>
+          <section data-transiiton="convex" data-background="images/stage.jpg">
+            <h3>Act 2, Scene 2: <span style="font-style:oblique">Community Adoption</span></h3>
+            <img data-src="images/wb-community-adoption.png" style="max-width:70%" />
+          </section>
+          <section data-transiiton="convex" data-background="images/stage.jpg">
+            <h3>Act 2, Scene 3: <span style="font-style:oblique">Maintainer Activity</span></h3>
+            <img data-src="images/wb-maintainer-activity.png" style="max-width:70%" />
           </section>
         </section>
         <section data-background="images/a_background.png">
@@ -297,6 +311,26 @@ Feature: Moderation Schedule
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
             <h3>Act 3: <span style="font-style:oblique">Analyze the Gaps</span></h3>
+            <img data-src="images/dev-analyze.png" class="no-border section-gif" style="max-width:350px" />
+          </section>
+          <section data-transiiton="convex" data-background="images/stage.jpg">
+            <h3>Act 2, Scene 1: <span style="font-style:oblique">Test the Module</span></h3>
+            <img class="animated-gif section-gif" data-src="images/wb-test.gif" /><br />
+            <span class="caption">??</span>
+          </section>
+          <section data-transiiton="convex" data-background="images/stage.jpg">
+            <h3>Act 2, Scene 2: <span style="font-style:oblique">Discover Missing Functionality</span></h3>
+            <br />
+            <p class="tldr fragment" style="-webkit-transform: rotate(-13deg);
+;border:0 !important;text-align:left">Unable to create different transitions per node</p>
+            <br />
+            <p class="tldr fragment" style="-webkit-transform: rotate(8deg);border:0 !important;text-align:right">Unable to set transition states</p>
+            <br />
+            <p class="tldr fragment" style="border:0 !important;">No Features support</p>
+          </section>
+          <section data-transiiton="convex" data-background="images/stage.jpg">
+            <h3>Act 2, Scene 3: <span style="font-style:oblique">Check for Community Solutions</span></h3>
+            <img data-src="images/wb-community-solutions.png" style="max-width:70%" />
           </section>
         </section>
         <section data-background="images/d_background.png">
@@ -330,21 +364,112 @@ Feature: Moderation Schedule
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
             <h3>Act 4: <span style="font-style:oblique">Determine Work Needed</span></h3>
-          </section>
-        </section>
-        <section>
-          <section>
-            <h2>Review</h2>
-            <img data-src="images/read-flowchart.png" class="screenshot" />
-            <p class="caption">The steps of R.E.A.D can be thought as a flow of yes/no questions.</p>
+            <img data-src="images/dev-determine.png" class="no-border section-gif" style="max-width:350px" />
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
-            <h3>Act 5: <span style="font-style:oblique">The Choice</span></h3>
+            <h3>Act 4, Scene 1: <span style="font-style:oblique">Review the Code</span></h3>
+            <pre><code class="php line-numbers" data-trim>
+/**
+ * Handles when scheduler unpublishes a node.
+ * @param stdClass $node
+ *   Node being unpublished
+ */
+function _scheduler_workbench_scheduler_unpublish(&$node) {
+  if ($state = variable_get('scheduler_unpublish_moderation_state_' . $node->type, FALSE)) {
+    workbench_moderation_moderate($node, $state);
+  }
+}
+
+/**
+ * Handles when scheduler publishes a node.
+ * @param stdClass $node
+ *   Node being published
+ */
+function _scheduler_workbench_scheduler_pre_publish(&$node) {
+  if ($state = variable_get('scheduler_publish_moderation_state_' . $node->type, FALSE)) {
+    $node->workbench_moderation_state_current = $node->workbench_moderation['my_revision']->state;
+    $node->workbench_moderation_state_new = $state;
+  }
+}
+            </code></pre>
+          </section>
+          <section data-transiiton="convex" data-background="images/stage.jpg">
+            <h3>Act 4, Scene 2: <span style="font-style:oblique">Evaluate Changes</span></h3>
+            <br />
+            <p class="tldr fragment" style="-webkit-transform: rotate(-12deg);border:0 !important;text-align:left">Have to reprogram schedule creation</p>
+            <br />
+            <p class="tldr fragment" style="-webkit-transform: rotate(6deg);
+;border:0 !important;text-align:right">Have to add Features support</p>
+            <br />
+            <p class="tldr fragment" style="border:0 !important;">Need to extend & alter module</p>
+          </section>
+
+          <section data-transiiton="convex" data-background="images/stage.jpg">
+            <h3>Act 4, Scene 3: <span style="font-style:oblique">Estimate Effort</span></h3>
+            <br />
+            <p class="tldr fragment" style="-webkit-transform: rotate(6deg);
+;border:0 !important;text-align:right">Changes would be very complex</p>
+            <br />
+            <p class="tldr fragment" style="border:0 !important;">
+            Confident can make them</p>
+            <br />
+            <p class="tldr fragment" style="-webkit-transform: rotate(-12deg);border:0 !important;text-align:left">Not enough time to rewrite module</p>
           </section>
         </section>
         <section>
           <section>
-            <h1>Notes & Slides</h1>
+            <h1>Making The Choice</h1>
+            <p class="tldr">What to do with all the data</p>
+          </section>
+          <section>
+            <h2>Go with the Flow</h2>
+            <img data-src="images/read-flowchart.png" class="screenshot" />
+          </section>
+          <section>
+            <h2>Potential Solutions</h2>
+            <ul>
+              <li class="fragment">Use a community module</li>
+              <li class="fragment">Use a community module with community solution</li>
+              <li class="fragment">Patch a community module</li>
+              <li class="fragment">Build a custom module</li>
+            </ul>
+          </section>
+          <section data-transiiton="convex" data-background="images/stage.jpg">
+            <h3>Act 5: <span style="font-style:oblique">Making The Choice</span></h3>
+            <img data-src="images/dev-solution.png" class="no-border section-gif" style="max-width:350px" />
+          </section>
+          <section data-transiiton="convex" data-background="images/stage.jpg">
+            <h3>Act 5, Scene 1: <span style="font-style:oblique">Go with the Flow</span></h3>
+            <ul style="list-style-type:none">
+              <li class="fragment">Found modules? <strong style="color:green">Yes</strong></li>
+              <li class="fragment">Found a best fit? <strong style="color:green">Yes</strong></li>
+              <li class="fragment">Are there gaps? <strong style="color:green">Yes</strong></li>
+              <li class="fragment">Are there community solutions? <strong style="color:red">No</strong></li>
+              <li class="fragment">Need a lot of work? <strong style="color:green">Yes</strong></li>
+            </ul>
+          </section>
+          <section data-transiiton="convex" data-background="images/stage.jpg">
+            <h3>Act 5, Scene 2: <span style="font-style:oblique">Custom module</span></h3>
+            <img data-src="images/wb-module.png" style="max-width:60%" />
+          </section>
+        </section>
+        <section>
+          <h1>R.E.A.D</h1>
+          <ul style="list-style-type:none">
+            <li class="fragment"><strong style="color:yellow">R</strong>esearch what exists</li>
+            <li class="fragment"><strong style="color:yellow">E</strong>valuate the options</li>
+            <li class="fragment"><strong style="color:yellow">A</strong>nalyze the gaps</li>
+            <li class="fragment"><strong style="color:yellow">D</strong>etermine work needed</li>
+          </ul>
+        </section>
+        <section>
+          <section>
+            <h1>Slides & Notes</h1>
+            <ul>
+              <li><a href="http://bit.ly/bc15READ" target="_blank">bit.ly/bc15READ</a></li>
+              <li><a href="http://bit.ly/bc15READslides" target="_blank">bit.ly/bc15READslides</a></li>
+              <li><a href="http://bit.ly/drupalREAD" target="_blank">bit.ly/drupalREAD</a></li>
+            </ul>
           </section>
           <section data-transition="convex">
             <h1>Thank You!</h1>

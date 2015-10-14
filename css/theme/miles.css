@@ -1,5 +1,13 @@
 @import url(../../lib/font/source-sans-pro/source-sans-pro.css);
 
+.footer {
+  display: inline-block;
+  position: absolute;
+  bottom: 0em;
+  z-index: 100;
+  width: 100%;
+}
+
 .footer .branding--logo {
   display: inline-block;
   float: left;
