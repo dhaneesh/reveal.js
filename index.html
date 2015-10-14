@@ -57,7 +57,8 @@
     </div>
 
 			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
+      <!-- hide captions: data-captions-aside -->
+			<div class="slides" data-captions-aside>
         <section>
           <section>
             <h1>R.E.A.D</h1>
@@ -418,6 +419,7 @@ function _scheduler_workbench_scheduler_pre_publish(&$node) {
             <h2>Go with the Flow</h2>
             <img data-src="images/read-flowchart.png" class="screenshot" />
           </section>
+          <!--
           <section>
             <h2>Potential Solutions</h2>
             <ul>
@@ -427,9 +429,13 @@ function _scheduler_workbench_scheduler_pre_publish(&$node) {
               <li class="fragment">Build a custom module</li>
             </ul>
           </section>
+        -->
           <section>
             <h2>Solution Percentages</h2>
-            <img data-src="images/solutions-graph.png" />
+            <img data-src="images/solutions-graph.png" class="no-border screenshot" />
+          </section>
+          <section>
+            <h2>Building with Drupal 8</h2>
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
             <h3>Act 5: <span style="font-style:oblique">Making The Choice</span></h3>
