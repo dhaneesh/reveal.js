@@ -58,7 +58,7 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
       <!-- hide captions: data-captions-aside -->
-			<div class="slides" data-captions-aside>
+			<div class="slides">
         <section>
           <section>
             <h1>R.E.A.D</h1>
@@ -90,6 +90,8 @@
                 <span class="fragment"><strong>Drupal.org:</strong> mikemiles86</span>
                 <br />
                 <span class="fragment"><strong>All the Places:</strong> mikemiles86</span>
+                <br />
+                <span class="fragment"><a href="http://www.mike-miles.com" target="_blank">mike-miles.com</a></span>
               </p>
               <aside class="notes">
                 <ul>
@@ -102,9 +104,9 @@
           <section>
             <h1>Goals of this Session</h1>
             <ul>
-              <li class="fragment">Outline the steps of R.E.A.D</li>
-              <li class="fragment">Demonstrate the effectivness of R.E.A.D</li>
-              <li class="fragment">Teach great module selection habits</li>
+              <li class="fragment">Outline steps to decide between contrib, patched or custom module.</li>
+              <li class="fragment">Demonstrate the effectiveness of R.E.A.D</li>
+              <li class="fragment">Teach great habits for making module selections</li>
             <ul>
           </section>
         </section>
@@ -113,19 +115,19 @@
             <h1>What it is all About</h1>
             <p class="tldr">How to make smart, timely and informed decisions.</p>
           </section>
-          <section data-transition="convex">
-            <h2>Why this is Important</h2>
-            <img class="no-border" alt="the reality triangle" data-src="images/scope-budget-timeline.png" />
-            <p class="caption">All projects are subject to the same limits of time (timeline), functionality (scope) and money (budget).</p>
-          </section>
           <section>
             <h2>R.E.A.D</h2>
             <ul style="list-style-type:none">
               <li class="fragment"><strong style="color:yellow">R</strong>esearch what exists</li>
               <li class="fragment"><strong style="color:yellow">E</strong>valuate the options</li>
               <li class="fragment"><strong style="color:yellow">A</strong>nalyze the gaps</li>
-              <li class="fragment"><strong style="color:yellow">D</strong>etermine work needed</li>
+              <li class="fragment"><strong style="color:yellow">D</strong>etermine changes</li>
             </ul>
+          </section>
+          <section data-transition="convex">
+            <h2>Why this is Important</h2>
+            <img class="no-border" alt="the reality triangle" data-src="images/scope-budget-timeline.png" />
+            <p class="caption">All projects are subject to the same limits of time (timeline), functionality (scope) and money (budget).</p>
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
             <p class="tldr" style="border:0 !important;">Badcamp presents</p>
@@ -137,6 +139,7 @@
             <h3>A. Drupalist</h3>
             <img data-src="images/dev-developer.png" class="no-border section-gif" style="max-width:350px" />
           </section>
+          <!--
           <section data-transiiton="convex" data-background="images/stage.jpg">
             <h3>Act 0: <span style="font-style:oblique">The Requirements</span></h3>
             <pre><code class="gherkin" data-trim>
@@ -161,6 +164,7 @@ Feature: Moderation Schedule
     And I can import the schedule into a new site.
             </code></pre>
           </section>
+          //-->
         </section>
         <section data-background="images/r_background.png">
           <section>
@@ -178,9 +182,9 @@ Feature: Moderation Schedule
           <section data-transition="convex">
             <h2>Perform Searches</h2>
             <ul>
+              <li class="fragment">30K+ modules on Drupal.org</li>
               <li class="fragment">Favorite Search Engine, "Drupal [keywords]"</li>
               <li class="fragment">Drupal.org, "[keywords]"</li>
-              <li class="fragment">??</li>
             </ul>
           </section>
           <section data-transition="convex">
@@ -224,7 +228,57 @@ Feature: Moderation Schedule
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
             <h3>Act 1, Scene 3: <span style="font-style:oblique">Utilize the Community</span></h3>
-            <img class="animated-gif section-gif" data-src="images/wb-community.gif" /><br />
+            <div class="code" style="font-size:45%">
+            <table border="0" cellpadding="0" cellspacing="0" style="font-family: monospace !important;">
+              <tr style="color:#999">
+                <td style="background:#ccc;border:0;border-right:1px #333 solid;text-align:right;">&nbsp;</td>
+                <td style="background:#fff;border:0">» The topic for #drupal is: #drupal is for general chitchat, quick questions, and community talk</td>
+              </tr>
+              <tr style="color:#06F">
+                <td style="background:#ccc;border:0;border-right:1px #333 solid;text-align:right;">drupalist</td>
+                <td style="background:#fff;border:0;">Does anyone know how to schedule workbench moderation changes?</td>
+              </tr>
+              <tr style="color:#c30">
+                <td style="background:#ccc;border:0;border-right:1px #333 solid;text-align:right;">fenjB</td>
+                <td style="background:#fff;border:0">drupalist: are you looking to schedule publishing of a node?</td>
+              </tr>
+              <tr style="color:#06F">
+                <td style="background:#ccc;border:0;border-right:1px #333 solid;text-align:right;">drupalist</td>
+                <td style="background:#fff;border:0;">Um... maybe? I need to be able to select the date for a node to enter a moderation states</td>
+              </tr>
+              <tr style="color:#c30">
+                <td style="background:#ccc;border:0;border-right:1px #333 solid;text-align:right;">runningHawk</td>
+                <td style="background:#fff;border:0">Sounds like you want to use the Scheduler module, since it can trigger events.</td>
+              </tr>
+                <tr style="color:#999">
+                <td style="background:#ccc;border:0;border-right:1px #333 solid;text-align:right;">&nbsp;</td>
+                <td style="background:#fff;border:0">peebz is now known as afk_peebz</td>
+              </tr>
+              <tr style="color:#c30">
+                <td style="background:#ccc;border:0;border-right:1px #333 solid;text-align:right;">fenjB</td>
+                <td style="background:#fff;border:0">drupalist: ^^ Scheduler Workbench Integration might do what you are looking for.</td>
+              </tr>
+              <tr style="color:#c30">
+                <td style="background:#ccc;border:0;border-right:1px #333 solid;text-align:right;">fenjB</td>
+                <td style="background:#fff;border:0">Scheduler Workbench Integration?</td>
+              </tr>
+              <tr style="color:#c30">
+                <td style="background:#ccc;border:0;border-right:1px #333 solid;text-align:right;">Druplicon</td>
+                <td style="background:#fff;border:0">Scheduler Workbench Integration module Provides integration between the Scheduler module and the Workbench Moderation module. http://drupal.org/project/scheduler_workbench</td>
+              </tr>
+              <tr style="color:#c30">
+                <td style="background:#ccc;border:0;border-right:1px #333 solid;text-align:right;">woogman</td>
+                <td style="background:#fff;border:0">masher: Did you ever write that migrate class?</td>
+              </tr>
+              <tr style="color:#06F">
+                <td style="background:#ccc;border:0;border-right:1px #333 solid;text-align:right;">drupalist</td>
+                <td style="background:#fff;border:0;">fenjB: I was just looking at that. I'll take a deeper dive, thanks!</td>
+              </tr>
+              <tr>
+                <td colspan="2" style="background:#fff;border:0;border-top:1px #000 solid;color:#000"> |</td>
+              </tr>
+            </table>
+          </div>
             <span class="caption">Looking for support the developer jumps into the #drupal-support IRC channel and asks the community for advice..</span>
           </section>
         </section>
@@ -246,7 +300,7 @@ Feature: Moderation Schedule
             <ul>
               <li class="fragment">Downloads vs. Installs vs. Age</li>
               <li class="fragment">Activity of the issue queue</li>
-              <li class="fragment">??</li>
+              <li class="fragment">Issues and bugs are good! (to a point)</li>
             </ul>
           </section>
           <section data-transition="convex">
@@ -282,17 +336,17 @@ Feature: Moderation Schedule
           <section data-transition="convex">
             <h2>Test the Module</h2>
             <ul>
-              <li class="fragment">Download into a sandbox</li>
+              <li class="fragment">Download into a sandbox (<a href="https://simplytest.me/" target="_blank">simplytest.me</a>)</li>
               <li class="fragment">Discover what is offered out of the box</li>
-              <li class="fragment">Timebox time spent</li>
+              <li class="fragment">How does it meet your needs</li>
             </ul>
           </section>
           <section data-transition="convex">
             <h2>Discover Missing Functionality</h2>
             <ul>
-              <li class="fragment">List what module does not do</li>
+              <li class="fragment">What does the module not do?</li>
+              <li class="fragment">Missing 20%? Missing 80%?</li>
               <li class="fragment">Bigger the gap = larger amount of effort</li>
-              <li class="fragment">??</li>
             </ul>
           </section>
           <section data-transition="convex">
@@ -300,7 +354,7 @@ Feature: Moderation Schedule
             <ul>
               <li class="fragment">Look at the issue queue</li>
               <li class="fragment">Search "Drupal [module] [functionality]"</li>
-              <li class="fragment">What gaps does community close</li>
+              <li class="fragment">Close gaps with community help</li>
             </ul>
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
@@ -309,7 +363,7 @@ Feature: Moderation Schedule
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
             <h3>Act 2, Scene 1: <span style="font-style:oblique">Test the Module</span></h3>
-            <img class="animated-gif section-gif" data-src="images/wb-test.gif" /><br />
+            <img class="animated-gif section-gif" data-src="images/wb-test.gif" style="width:80%;" /><br />
             <span class="caption">??</span>
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
@@ -329,21 +383,21 @@ Feature: Moderation Schedule
         </section>
         <section data-background="images/d_background.png">
           <section>
-            <h1>Determine Work Needed</h1>
+            <h1>Determine Changes</h1>
             <p class="tldr">What is needed to close any gaps.</p>
           </section>
           <section data-transition="convex">
             <h2>Review the Code</h2>
             <ul>
-              <li class="fragment">Understand how functionality works?</li>
-              <li class="fragment">Does it utilize APIs & hooks?</li>
               <li class="fragment">Does it follow standards?</li>
+              <li class="fragment">Is it extendable with APIs & hooks?</li>
+              <li class="fragment">Understand how functionality works?</li>
             </ul>
           </section>
           <section data-transition="convex">
             <h2>Evaluate Changes</h2>
             <ul>
-              <li class="fragment">What gaps need to be closed?</li>
+              <li class="fragment">How much code needs to be changed?</li>
               <li class="fragment">Would changes extend?</li>
               <li class="fragment">Would changes alter?</li>
             </ul>
@@ -357,12 +411,12 @@ Feature: Moderation Schedule
             </ul>
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
-            <h3>Act 4: <span style="font-style:oblique">Determine Work Needed</span></h3>
+            <h3>Act 4: <span style="font-style:oblique">Determine Change</span></h3>
             <img data-src="images/dev-determine.png" class="no-border section-gif" style="max-width:350px" />
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
             <h3>Act 4, Scene 1: <span style="font-style:oblique">Review the Code</span></h3>
-            <pre><code class="php line-numbers" data-trim>
+            <pre style="max-width:80%"><code class="php line-numbers" data-trim>
 /**
  * Handles when scheduler unpublishes a node.
  * @param stdClass $node
@@ -390,12 +444,12 @@ function _scheduler_workbench_scheduler_pre_publish(&$node) {
           <section data-transiiton="convex" data-background="images/stage.jpg">
             <h3>Act 4, Scene 2: <span style="font-style:oblique">Evaluate Changes</span></h3>
             <br />
-            <p class="tldr fragment" style="-webkit-transform: rotate(-12deg);border:0 !important;text-align:left">Have to reprogram schedule creation</p>
+            <p class="tldr fragment" style="-webkit-transform: rotate(-12deg);border:0 !important;text-align:left">Have to reprogram schedule creation and storage</p>
             <br />
             <p class="tldr fragment" style="-webkit-transform: rotate(6deg);
 ;border:0 !important;text-align:right">Have to add Features support</p>
             <br />
-            <p class="tldr fragment" style="border:0 !important;">Need to extend & alter module</p>
+            <p class="tldr fragment" style="border:0 !important;">Would extend & alter module</p>
           </section>
 
           <section data-transiiton="convex" data-background="images/stage.jpg">
@@ -416,11 +470,6 @@ function _scheduler_workbench_scheduler_pre_publish(&$node) {
             <p class="tldr">What to do with all the data</p>
           </section>
           <section>
-            <h2>Go with the Flow</h2>
-            <img data-src="images/read-flowchart.png" class="screenshot" />
-          </section>
-          <!--
-          <section>
             <h2>Potential Solutions</h2>
             <ul>
               <li class="fragment">Use a community module</li>
@@ -429,13 +478,13 @@ function _scheduler_workbench_scheduler_pre_publish(&$node) {
               <li class="fragment">Build a custom module</li>
             </ul>
           </section>
-        -->
+          <section>
+            <h2>Go with the Flow</h2>
+            <img data-src="images/read-flowchart.png" class="screenshot" />
+          </section>
           <section>
             <h2>Solution Percentages</h2>
             <img data-src="images/solutions-graph.png" class="no-border screenshot" />
-          </section>
-          <section>
-            <h2>Building with Drupal 8</h2>
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
             <h3>Act 5: <span style="font-style:oblique">Making The Choice</span></h3>
@@ -443,13 +492,16 @@ function _scheduler_workbench_scheduler_pre_publish(&$node) {
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
             <h3>Act 5, Scene 1: <span style="font-style:oblique">Go with the Flow</span></h3>
+            <img data-src="images/dev-flowchart.png" style="max-width:80%" class="no-border" />
+            <!--
             <ul style="list-style-type:none">
               <li class="fragment">Found modules? <strong style="color:green">Yes</strong></li>
               <li class="fragment">Found a best fit? <strong style="color:green">Yes</strong></li>
               <li class="fragment">Are there gaps? <strong style="color:green">Yes</strong></li>
               <li class="fragment">Are there community solutions? <strong style="color:red">No</strong></li>
-              <li class="fragment">Need a lot of work? <strong style="color:green">Yes</strong></li>
+              <li class="fragment">Complex changes? <strong style="color:green">Yes</strong></li>
             </ul>
+            //-->
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
             <h3>Act 5, Scene 2: <span style="font-style:oblique">Solution</span></h3>
@@ -463,7 +515,7 @@ function _scheduler_workbench_scheduler_pre_publish(&$node) {
               <li class="fragment"><strong style="color:yellow">R</strong>esearch what exists</li>
               <li class="fragment"><strong style="color:yellow">E</strong>valuate the options</li>
               <li class="fragment"><strong style="color:yellow">A</strong>nalyze the gaps</li>
-              <li class="fragment"><strong style="color:yellow">D</strong>etermine work needed</li>
+              <li class="fragment"><strong style="color:yellow">D</strong>etermine changes</li>
             </ul>
           </section>
           <section>
