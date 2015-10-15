@@ -324,7 +324,6 @@ AND these mappings need to be <strong style="color:yellow">exportable</strong> u
           <section data-transiiton="convex" data-background="images/stage.jpg">
             <h3>Act 2, Scene 1: <span style="font-style:oblique">Test the Module</span></h3>
             <img class="animated-gif section-gif" data-src="images/wb-test.gif" style="width:80%;" /><br />
-            <span class="caption">??</span>
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
             <h3>Act 2, Scene 2: <span style="font-style:oblique">Discover Missing Functionality</span></h3>
@@ -371,51 +370,53 @@ AND these mappings need to be <strong style="color:yellow">exportable</strong> u
           <section data-transiiton="convex" data-background="images/stage.jpg">
             <h3>Act 4, Scene 1: <span style="font-style:oblique">Review the Code</span></h3>
             <pre style="max-width:80%"><code class="php line-numbers" data-trim>
-/**
- * Handles when scheduler unpublishes a node.
- * @param stdClass $node
- *   Node being unpublished
- */
-function _scheduler_workbench_scheduler_unpublish(&$node) {
-  if ($state = variable_get('scheduler_unpublish_moderation_state_' . $node->type, FALSE)) {
-    workbench_moderation_moderate($node, $state);
+&lt;?php
+//...
+function exif_custom_get_mapping(){
+  //First try and get users default
+  $mid = exif_custom_get_user_default();
+  //Else use site default or item 0
+  if($mid === FALSE){
+    $mid = exif_custom_get_mid(variable_get('exif_custom_default', ''));
   }
+  $sql = "SELECT * FROM {exif_custom_mapped_fields} WHERE mid = :mid AND img_field != 'none'";
+  $return = db_query($sql, array(
+    ':mid' => $mid
+  ))->fetchAllAssoc('img_field');
+  return $return;
 }
 
-/**
- * Handles when scheduler publishes a node.
- * @param stdClass $node
- *   Node being published
- */
-function _scheduler_workbench_scheduler_pre_publish(&$node) {
-  if ($state = variable_get('scheduler_publish_moderation_state_' . $node->type, FALSE)) {
-    $node->workbench_moderation_state_current = $node->workbench_moderation['my_revision']->state;
-    $node->workbench_moderation_state_new = $state;
-  }
-}
+function exif_custom_mappings(){
+  $output = '';
+  $mappings = _exif_custom_get_maps();
+  if($mappings == false){
+    $output .= '&lt;p>You have not yet created any mappings.</p>';
+  } else {
+    $site_default_mid = exif_custom_get_mid(variable_get('exif_custom_default', ''));
+    $output .= '&lt;table>';
+// ...
             </code></pre>
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
             <h3>Act 4, Scene 2: <span style="font-style:oblique">Evaluate Changes</span></h3>
             <br />
-            <p class="tldr fragment" style="-webkit-transform: rotate(-12deg);border:0 !important;text-align:left">Have to reprogram schedule creation and storage</p>
+            <p class="tldr fragment" style="-webkit-transform: rotate(-12deg);border:0 !important;text-align:left">Have to add Features support</p>
             <br />
             <p class="tldr fragment" style="-webkit-transform: rotate(6deg);
-;border:0 !important;text-align:right">Have to add Features support</p>
+;border:0 !important;text-align:right">Requires adding machine_names</p>
             <br />
-            <p class="tldr fragment" style="border:0 !important;">Would extend & alter module</p>
+            <p class="tldr fragment" style="border:0 !important;">would be extending the module</p>
           </section>
 
           <section data-transiiton="convex" data-background="images/stage.jpg">
             <h3>Act 4, Scene 3: <span style="font-style:oblique">Estimate Effort</span></h3>
             <br />
             <p class="tldr fragment" style="-webkit-transform: rotate(6deg);
-;border:0 !important;text-align:right">Changes would be very complex</p>
+;border:0 !important;text-align:right">Changes to module are minimal</p>
             <br />
-            <p class="tldr fragment" style="border:0 !important;">
-            Confident can make them</p>
+            <p class="tldr fragment" style="border:0 !important;">Lots of Features documentation, confident can add code</p>
             <br />
-            <p class="tldr fragment" style="-webkit-transform: rotate(-12deg);border:0 !important;text-align:left">Not enough time to rewrite module</p>
+            <p class="tldr fragment" style="-webkit-transform: rotate(-12deg);border:0 !important;text-align:left">Will not take a lot of time.</p>
           </section>
         </section>
         <section>
@@ -447,15 +448,6 @@ function _scheduler_workbench_scheduler_pre_publish(&$node) {
           <section data-transiiton="convex" data-background="images/stage.jpg">
             <h3>Act 5, Scene 1: <span style="font-style:oblique">Go with the Flow</span></h3>
             <img data-src="images/dev-flowchart.png" style="max-width:80%" class="no-border" />
-            <!--
-            <ul style="list-style-type:none">
-              <li class="fragment">Found modules? <strong style="color:green">Yes</strong></li>
-              <li class="fragment">Found a best fit? <strong style="color:green">Yes</strong></li>
-              <li class="fragment">Are there gaps? <strong style="color:green">Yes</strong></li>
-              <li class="fragment">Are there community solutions? <strong style="color:red">No</strong></li>
-              <li class="fragment">Complex changes? <strong style="color:green">Yes</strong></li>
-            </ul>
-            //-->
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
             <h3>Act 5, Scene 2: <span style="font-style:oblique">Solution</span></h3>
