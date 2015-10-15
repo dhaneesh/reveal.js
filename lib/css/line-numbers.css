@@ -1,13 +1,13 @@
 
-code.line-numbers {
+.line-numbers {
   counter-reset: line;
 }
 
-code span.line-number {
+span.line-number {
   counter-increment: line;
 }
 
-code span.line-number:before {
+span.line-number:before {
   content: counter(line);
   color: gray;
 }
