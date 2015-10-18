@@ -58,7 +58,7 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
       <!-- hide captions: data-captions-aside -->
-			<div class="slides">
+			<div class="slides" data-captions-aside>
         <section>
           <section>
             <h1>R.E.A.D</h1>
@@ -97,7 +97,7 @@
                 <ul>
                   <li>Genuine - full service digital agency.</li>
                   <li>Specialize in Brand engagments, SEO, UX, Design, Video, Development.</li>
-                  <li>Home Office in Boston. Offices in NYC, SF, Chicago.</li>
+                  <li>Home Office in Boston. Offices in NYC, Chicago, SF.</li>
                 </ul>
               </aside>
           </section>
@@ -108,12 +108,28 @@
               <li class="fragment">Demonstrate the effectiveness of R.E.A.D</li>
               <li class="fragment">Teach great habits for making module selections</li>
             <ul>
+            <aside class="notes">
+              <ul>
+                <li>3 Goals
+                  <ul>
+                    <li>Outline</li>
+                    <li>Demonstrate</li>
+                    <li>Teach</li>
+                  </ul>
+                </li>
+              </ul>
+            </aside>
           </section>
         </section>
         <section>
           <section data-transition="convex">
             <h1>What it is all About</h1>
             <p class="tldr">How to make smart, timely and informed decisions.</p>
+          </section>
+          <section data-transition="convex">
+            <h2>Why this is Important</h2>
+            <img class="no-border" alt="the reality triangle" data-src="images/scope-budget-timeline.png" />
+            <p class="caption">All projects are subject to these three constraints. Need to be able to quickly and correctly make the right decisions for how to build functionality.</p>
           </section>
           <section>
             <h2>R.E.A.D</h2>
@@ -123,11 +139,9 @@
               <li class="fragment"><strong style="color:yellow">A</strong>nalyze the gaps</li>
               <li class="fragment"><strong style="color:yellow">D</strong>etermine changes</li>
             </ul>
-          </section>
-          <section data-transition="convex">
-            <h2>Why this is Important</h2>
-            <img class="no-border" alt="the reality triangle" data-src="images/scope-budget-timeline.png" />
-            <p class="caption">All projects are subject to the same limits of time (timeline), functionality (scope) and money (budget).</p>
+            <aside class="notes">
+              Steps seen other great developers follow, when making the right choices. About how to pick not how to build.
+            </aside>
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
             <p class="tldr" style="border:0 !important;">Badcamp presents</p>
@@ -136,8 +150,11 @@
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
             <p class="tldr" style="border:0 !important;">Starring</p>
-            <h3>A. Drupalist</h3>
+            <h3>A Drupalist</h3>
             <img data-src="images/dev-developer.png" class="no-border section-gif" style="max-width:350px" />
+            <p class="caption">
+              Everyones favorite hero. Will see him go through the 4 steps of R.E.A.D to make a decision on how to build the required functionality.
+            </p>
           </section>
         </section>
         <section data-background="images/r_background.png">
@@ -150,8 +167,15 @@
             <ul>
               <li class="fragment">Gather all documentation, specs, notes, etc...</li>
               <li class="fragment">Ask questions about any assumptions</li>
-              <li class="fragment">Mark, highlight, circle unique nouns and verbs</li>
+              <li class="fragment">Highlight, circle, mark unique nouns and verbs</li>
             </ul>
+            <aside class="notes">
+              <ul>
+                <li>Notes, docs, conversations. Gather all info you have</li>
+                <li>Reiterate to (client) what you unsderstand.</li>
+                <li>Want to remove fluff and focus</li>
+              </ul>
+            </aside>
           </section>
           <section data-transition="convex">
             <h2>Perform Searches</h2>
@@ -160,6 +184,13 @@
               <li class="fragment">Favorite Search Engine, "Drupal [keywords]"</li>
               <li class="fragment">Drupal.org, "[keywords]"</li>
             </ul>
+            <aside class="notes">
+              <ul>
+                <li>Important part of step</li>
+                <li>Someone has probably done it</li>
+                <li>Building is expensive, searching is cheap</li>
+              </ul>
+            </aside>
           </section>
           <section data-transition="convex">
             <h2>Utilize the Community</h2>
@@ -168,6 +199,15 @@
               <li class="fragment">Find Drupal group on favorite social network(s)</li>
               <li class="fragment">Talk offline at meetups, camps and cons.</li>
             </ul>
+            <aside class="notes">
+              <ul>
+                <li>Community is strength of Drupal and helping out</li>
+                <li>Two channels used for questions.</li>
+                <li>Facebook, LinkedIn, Google+, Reddit, etc...</li>
+                <li>IRL communitcation and connection. build up a network</li>
+                <li>Be sure to give back to community, all here together</li>
+              </ul>
+            </aside>
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
             <h3>Act 1: <span style="font-style:oblique">Research What Exists</span></h3>
@@ -180,11 +220,16 @@ AND it is a <strong style="color:yellow">jpeg image</strong>
 THEN the <strong style="color:yellow">exif meta data</strong> needs to be <strong style="color:yellow">captured</strong>
 AND <strong style="color:yellow">mapped</strong> to <strong style="color:yellow">custom fields</strong>
 AND these mappings need to be <strong style="color:yellow">exportable</strong> using <strong style="color:yellow">features</strong></span></pre>
+            <p class="caption">
+              Compiling information about his requirements, our Drupalist highlights the terms he thinks are important, terms that he can search for modules with.
+            </p>
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
             <h3>Act 1, Scene 2: <span style="font-style:oblique">Perform Searches</span></h3>
             <img class="animated-gif section-gif" data-src="images/wb-perform-search.gif" /><br />
-            <span class="caption">Our plucky developer searches on Drupal.org for "Workbench schedule", to find any related modules.</span>
+            <p class="caption">
+              Drupalists takes the keyowrd "Exif" and performs a Google search. Immediatly has a list of potential modules to use.
+            </p>
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
             <h3>Act 1, Scene 3: <span style="font-style:oblique">Utilize the Community</span></h3>
@@ -248,7 +293,9 @@ AND these mappings need to be <strong style="color:yellow">exportable</strong> u
               </tr>
             </table>
           </div>
-            <span class="caption">Looking for support the developer jumps into the #drupal-support IRC channel and asks the community for advice..</span>
+            <p class="caption">
+              Our Drupalist signs onto the #drupal IRC channel and talks to the community for help. Community offers a potential module.
+            </p>
           </section>
         </section>
         <section data-background="images/e_background.png">
@@ -263,6 +310,13 @@ AND these mappings need to be <strong style="color:yellow">exportable</strong> u
               <li class="fragment">Answer "What does it do and not do?"</li>
               <li class="fragment">Answer "What does it depend on?"</li>
             </ul>
+            <aside class="notes">
+              <ul>
+                <li>Start with. Well written answer 2 questions</li>
+                <li>answer provide enough info to explain?</li>
+                <li>Modules, tech, 3rd part. Adds to completix of using as a solution</li>
+              </ul>
+            </aside>
           </section>
           <section data-transition="convex">
             <h2>Community Adoption</h2>
@@ -271,6 +325,13 @@ AND these mappings need to be <strong style="color:yellow">exportable</strong> u
               <li class="fragment">Activity of the issue queue</li>
               <li class="fragment">Issues and bugs are good! (to a point)</li>
             </ul>
+            <aside class="notes">
+              <ul>
+                <li>Used & Old/New, community using. Old & low, specific or not used</li>
+                <li>Contributes to improving the module?</li>
+                <li>To a point issues and bugs are good. Show want for improvment.</li>
+              </ul>
+            </aside>
           </section>
           <section data-transition="convex">
             <h2>Maintainer Activity</h2>
@@ -279,22 +340,39 @@ AND these mappings need to be <strong style="color:yellow">exportable</strong> u
               <li class="fragment">Participation in the issue queue</li>
               <li class="fragment">Acceptence of feedback</li>
             </ul>
+            <aside class="notes">
+              <li>Can you expect improvements, security updates?</li>
+              <li>Answers questions, offer soultions, fixes bugs?</li>
+              <li>Accepts patches and improvements?</li>
+            </aside>
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
             <h3>Act 2: <span style="font-style:oblique">Evaluate the Options</span></h3>
             <img data-src="images/dev-evaluate.png" class="no-border section-gif" style="max-width:350px" />
+            <p class="caption">
+              Our Drupalists takes a potential option "Exif Custom" and evaluates it.
+            </p>
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
             <h3>Act 2, Scene 1: <span style="font-style:oblique">Gain General Understanding</span></h3>
             <img data-src="images/wb-module-description.png" style="max-width:70%" />
+            <p class="caption">
+              Drupalists reads the description and quickly knows what the module does and what it depends on. Describes much of the functonality he is looking for.
+            </p>
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
             <h3>Act 2, Scene 2: <span style="font-style:oblique">Community Adoption</span></h3>
             <img data-src="images/wb-community-adoption.png" style="max-width:70%" />
+            <p class="caption">
+              Sees that it has not been downloaded or installed much. But it is a specific use case. Issue queue seems to have some activity.
+            </p>
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
             <h3>Act 2, Scene 3: <span style="font-style:oblique">Maintainer Activity</span></h3>
             <img data-src="images/wb-maintainer-activity.png" style="max-width:70%" />
+            <p class="caption">
+              From issue queue, Drupalist sees that maintainer participates. Also notices that maintainer seems active and releases updates.
+            </p>
           </section>
         </section>
         <section data-background="images/a_background.png">
@@ -309,6 +387,13 @@ AND these mappings need to be <strong style="color:yellow">exportable</strong> u
               <li class="fragment">Discover what is offered out of the box</li>
               <li class="fragment">How does it meet your needs</li>
             </ul>
+            <aside class="notes">
+              <ul>
+                <li>Need to get hands dirty</li>
+                <li>Important to timebox sandbox</li>
+                <li>How quick to setup and get what you need out of the box.</li>
+              </ul>
+            </aside>
           </section>
           <section data-transition="convex">
             <h2>Discover Missing Functionality</h2>
@@ -317,6 +402,13 @@ AND these mappings need to be <strong style="color:yellow">exportable</strong> u
               <li class="fragment">Missing 20%? Missing 80%?</li>
               <li class="fragment">Bigger the gap = larger amount of effort</li>
             </ul>
+            <aside class="notes">
+              <ul>
+                <li>What gaps lie in what is offered.</li>
+                <li>Importatnt o guage how much is missing.</li>
+                <li>More gap = more work for you.</li>
+              </ul>
+            </aside>
           </section>
           <section data-transition="convex">
             <h2>Check for Community Solutions</h2>
@@ -325,28 +417,44 @@ AND these mappings need to be <strong style="color:yellow">exportable</strong> u
               <li class="fragment">Search "Drupal [module] [functionality]"</li>
               <li class="fragment">Close gaps with community help</li>
             </ul>
+            <aside class="notes">
+              <ul>
+                <li>Has problem been solved?</li>
+                <li>Perform more searches.</li>
+                <li>Search and community is cheap, work is expense.</li>
+              </ul>
+            </aside>
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
             <h3>Act 3: <span style="font-style:oblique">Analyze the Gaps</span></h3>
             <img data-src="images/dev-analyze.png" class="no-border section-gif" style="max-width:350px" />
+            <p class="caption">
+              Drupalist has evaluated "Exif Custom" to be a best fit. Needs to see what gaps it may have.
+            </p>
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
             <h3>Act 2, Scene 1: <span style="font-style:oblique">Test the Module</span></h3>
             <img class="animated-gif section-gif" data-src="images/wb-test.gif" style="width:80%;" /><br />
+            <p class="caption">Downloads to local environment and can quickly setup and map exif data to fields</p>
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
             <h3>Act 2, Scene 2: <span style="font-style:oblique">Discover Missing Functionality</span></h3>
             <img class="animated-gif section-gif" data-src="images/wb-missing-functionality.gif" style="width:80%;" /><br />
+            <p class="caption">Discovers that there is not Features support, so mappings cannot be exported to other environments.</p>
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
             <h3>Act 2, Scene 3: <span style="font-style:oblique">Check for Community Solutions</span></h3>
             <img class="animated-gif section-gif" data-src="images/wb-community-solutions.gif" style="width:80%;" /><br />
+            <p class="caption">Drupalist turns back to the issue queue, to see if the general use case of Features has been solved. Is not able to find a solution to the gap.</p>
           </section>
         </section>
         <section data-background="images/d_background.png">
           <section>
             <h1>Determine Changes</h1>
             <p class="tldr">What is needed to close any gaps.</p>
+            <aside class="notes">
+              Asking yourself questions on work you have to do.
+            </aside>
           </section>
           <section data-transition="convex">
             <h2>Review the Code</h2>
@@ -355,6 +463,13 @@ AND these mappings need to be <strong style="color:yellow">exportable</strong> u
               <li class="fragment">Is it extendable with APIs & hooks?</li>
               <li class="fragment">Understand how functionality works?</li>
             </ul>
+            <aside class="notes">
+              <ul>
+                <li>Standards provide readability.</li>
+                <li>Use methods for exentind?</li>
+                <li>Understand where you need to insert?</li>
+              </ul>
+            </aside>
           </section>
           <section data-transition="convex">
             <h2>Evaluate Changes</h2>
@@ -363,6 +478,13 @@ AND these mappings need to be <strong style="color:yellow">exportable</strong> u
               <li class="fragment">Would changes extend?</li>
               <li class="fragment">Would changes alter?</li>
             </ul>
+            <aside class="notes">
+              <ul>
+                <li>Hard to change someone elses code. Not sure of impact.</li>
+                <li>Add something new to module , not change what it does?</li>
+                <li>Change what the module seeks to do. Its goals?</li>
+              </ul>
+            </aside>
           </section>
           <section data-transition="convex">
             <h2>Estimate Effort</h2>
@@ -371,10 +493,20 @@ AND these mappings need to be <strong style="color:yellow">exportable</strong> u
               <li class="fragment">How confident in ability to make changes?</li>
               <li class="fragment">Is there enough time to make changes?</li>
             </ul>
+            <aside class="notes">
+              <ul>
+                <li>Compleity takes more effort.</li>
+                <li>Can you make the needed changes? Need to learn something?</li>
+                <li>Time to make changes?</li>
+              </ul>
+            </aside>
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
             <h3>Act 4: <span style="font-style:oblique">Determine Change</span></h3>
             <img data-src="images/dev-determine.png" class="no-border section-gif" style="max-width:350px" />
+            <p class="caption">
+              After discovering the gap of Features support. Drupalist needs to determine how much would have to change.
+            </p>
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
             <h3>Act 4, Scene 1: <span style="font-style:oblique">Review the Code</span></h3>
@@ -405,6 +537,9 @@ function exif_custom_mappings(){
     $output .= '&lt;table>';
 // ...
             </code></pre>
+            <p class="caption">
+              Drupalist notes that code follows standards. He can read and understand what functions he'd need to use to build in Features support.
+            </p>
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
             <h3>Act 4, Scene 2: <span style="font-style:oblique">Evaluate Changes</span></h3>
@@ -415,8 +550,10 @@ function exif_custom_mappings(){
 ;border:0 !important;text-align:right">Requires adding machine_names</p>
             <br />
             <p class="tldr fragment" style="border:0 !important;">would be extending the module</p>
+            <p class="caption">
+              Drupalist qeustions what changes he'd need to make to implement Features support.
+            </p>
           </section>
-
           <section data-transiiton="convex" data-background="images/stage.jpg">
             <h3>Act 4, Scene 3: <span style="font-style:oblique">Estimate Effort</span></h3>
             <br />
@@ -425,7 +562,10 @@ function exif_custom_mappings(){
             <br />
             <p class="tldr fragment" style="border:0 !important;">Lots of Features documentation, confident can add code</p>
             <br />
-            <p class="tldr fragment" style="-webkit-transform: rotate(-12deg);border:0 !important;text-align:left">Will not take a lot of time.</p>
+            <p class="tldr fragment" style="-webkit-transform: rotate(-12deg);border:0 !important;text-align:left">Will not take a lot of time.</p><br /><br />
+            <p class="caption">
+              Drupalist determines changes are minimal as is the effrort. He has enough skill and time to make the needed changes.
+            </p>
           </section>
         </section>
         <section>
@@ -436,19 +576,29 @@ function exif_custom_mappings(){
           <section>
             <h2>Potential Solutions</h2>
             <ul>
-              <li class="fragment">Use a community module</li>
-              <li class="fragment">Use a community module with community solution</li>
-              <li class="fragment">Patch a community module</li>
+              <li class="fragment">Use a contrib module</li>
+              <li class="fragment">Use a contrib module with community solution</li>
+              <li class="fragment">Patch a contrib module</li>
               <li class="fragment">Build a custom module</li>
             </ul>
+            <aside class="notes">
+              <ul>
+                <li>4 potential solutions</li>
+                <li>These wrk as a flow</li>
+              </ul>
+            </aside>
           </section>
           <section>
             <h2>Go with the Flow</h2>
             <img data-src="images/read-flowchart.png" class="screenshot" />
+            <p class="caption">R.E.A.D is a flow you can follow to reach the right solutions. Each step is ultimetly a question.</p>
           </section>
           <section>
             <h2>Solution Percentages</h2>
-            <img data-src="images/solutions-graph.png" class="no-border screenshot" />
+            <img data-src="images/solutions-graph.png" class="no-border screenshot" style="max-width:500px" />
+            <p class="caption">
+              In general most likely will use a contrib module with or without community solutions or your own patch. Very rarely will you need to write a custom module.
+            </p>
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
             <h3>Act 5: <span style="font-style:oblique">Making The Choice</span></h3>
@@ -456,11 +606,17 @@ function exif_custom_mappings(){
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
             <h3>Act 5, Scene 1: <span style="font-style:oblique">Go with the Flow</span></h3>
-            <img data-src="images/dev-flowchart.png" style="max-width:80%" class="no-border" />
+            <img data-src="images/dev-flowchart.png" style="max-width:60%" class="no-border" />
+            <p class="caption">
+              Going through each steps and asking himself the questions our Drupalists decides that the correct path is to use Exif Custom and patch in Features support.
+            </p>
           </section>
           <section data-transiiton="convex" data-background="images/stage.jpg">
             <h3>Act 5, Scene 2: <span style="font-style:oblique">Solution</span></h3>
             <img data-src="images/wb-module.png" style="max-width:60%" />
+            <p class="caption">
+              Being a good member of the community, the Drupalists provides his Features patch back to the module. The active maintainer sees the benefit and merges it in.
+            </p>
           </section>
         </section>
         <section>
@@ -472,6 +628,14 @@ function exif_custom_mappings(){
               <li class="fragment"><strong style="color:yellow">A</strong>nalyze the gaps</li>
               <li class="fragment"><strong style="color:yellow">D</strong>etermine changes</li>
             </ul>
+            <aside class="notes">
+              <ul>
+                <li>Nothing crazy explained here.</li>
+                <li>Great habits seen in Drupalists.</li>
+                <li>Basic logic to follow when making decisions.</li>
+                <li>Efficient systems for determing how to build.</li>
+              </ul>
+            </aside>
           </section>
           <section>
             <h1>Slides & Notes</h1>
