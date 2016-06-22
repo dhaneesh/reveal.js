@@ -1,0 +1,32 @@
+.footer
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #efefef;
+    text-align: center;
+    color: black;
+    font-size: 0.5em;
+    display: inline-block;
+    clear: both;
+
+.footer-conference
+    font-size: 100%;
+    min-width: 33%;
+    text-align: left;
+    display: inline-block;
+
+.footer-company
+    min-width: 33%;
+    text-align: center;
+    display: inline-block;
+    font-size: 100%;
+
+.footer-info
+    text-align: right;
+    min-width: 33%;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    font-size: 100%;

@@ -29,25 +29,59 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
+        <!-- Title & About //-->
 				<section>
-          <pre><code class="php line-numbers" data-highlight-lines="1-3,5,7">
-            &gt;php
-$string = 'Hello World';
-$math = 1 + 3;
-$concat = 'Hello' . 'World';
-
-function my_func() {
-  // Comment
-  $do = 'nothing';
-}
-?>
-          </code></pre>
+          <section>
+            <h1>[Presentation Title]</h1>
+            <h2>[Presentation SubTitle]</h2>
+            <p><a href="[presentation-url" target="_blank">[presnetation url]</a></p>
+            <h3>[Conference Name]</h3>
+          </section>
+          <section data-transition="convex">
+            <h2>Mike Miles</h2>
+            <p>Genuine (<a href="//wearegenuine.com" target="_blank">wearegenuine.com</a>)</p>
+            <p>All the internet places: <a href="//twitter.com/mikemiles86" target="_blank">mikemiles86</a></p>
+            <aside class="notes">
+              <ul>
+                <li>You and your exp.</li>
+                <li>Who is Genuine & depts.</li>
+                <li>UX, Des, Strat, Dev. CHI, NYC, BOS, SF</li>
+              </ul>
+            </aside>
+          </section>
+        </section>
+        <!-- Body //-->
+        <section>
+        </section>
+        <!-- Resources, Feedback & Thanks //-->
+        <section>
+          <section>
+            <h2>Resources</h2>
+            <p>My Blog: <a href="//mike-miles.com" target="_blank" alt="Mike Miles Blog">mike-miles.com</a></p>
+          </section>
+          <section data-transition="convex">
+            <h1>Feedback</h1>
+            <h3><a href="http://www.twitter.com/mikemiles86">@mikemiles86</a></h3>
+            <h3 data-set-aside data-skip-print>[Conference Tag]</h3>
+          </section>
+        </section>
+        <section>
+          <h1>Thank You!</h1>
+          <p data-set-aside data-skip-print>Questions?</p>
         </section>
 			</div>
-		</div>
-
-
+      <div class="footer">
+        <span class="footer-conference">
+          Drupalcon
+        </span>
+        <span class="footer-company">
+          Genuine
+        </span>
+        <span class="footer-info">
+          Mike / Mike
+        </span>
+      </div>
+    </div>
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
@@ -66,7 +100,10 @@ function my_func() {
           { src: 'plugin/zoom-js/zoom.js', async: true },
 					{ src: 'plugin/notes/notes.js', async: true },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-          { src: 'plugin/line-numbers/line-numbers.js', async: false }
+          // Custom plugins.
+          { src: 'plugin/line-numbers/line-numbers.js', async: false },
+          { src: 'plugin/set-aside/set-aside.js', async: false },
+          { src: 'plugin/gif-reloader/gif-reloader.js', async: false}
 				]
 			});
 		</script>
